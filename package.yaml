@@ -1,0 +1,56 @@
+name:                advanced-haskell-types
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/epoberezkin/advanced-haskell-types
+license:             BSD3
+author:              Evgeny Poberezkin
+copyright:           2020 Evgeny Poberezkin
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - classy-prelude
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Worphans
+  - -Werror=incomplete-patterns
+  - -Wredundant-constraints
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+
+default-extensions:
+  - NoImplicitPrelude
+  # numbers, strings, lists
+  - NegativeLiterals
+  - NumericUnderscores
+  - OverloadedStrings
+  # function syntax
+  - BlockArguments
+  - LambdaCase
+  # Records
+  - DuplicateRecordFields
+  - NamedFieldPuns
+  - RecordWildCards
+  # deriving
+  - DeriveAnyClass
+  - DeriveGeneric
+  - GeneralisedNewtypeDeriving
+  - StandaloneDeriving
+  # type classes
+  - FunctionalDependencies
+  - FlexibleContexts
+  - InstanceSigs
+  # types
+  - LiberalTypeSynonyms
+  - TypeOperators
+
+
+executables:
+  advanced-haskell-types:
+    source-dirs:      src
+    main:             Main.hs
