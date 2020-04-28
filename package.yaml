@@ -25,29 +25,7 @@ ghc-options:
 
 default-extensions:
   - NoImplicitPrelude
-  # numbers, strings, lists
-  - NegativeLiterals
-  - NumericUnderscores
   - OverloadedStrings
-  # function syntax
-  - BlockArguments
-  - LambdaCase
-  # Records
-  - DuplicateRecordFields
-  - NamedFieldPuns
-  - RecordWildCards
-  # deriving
-  - DeriveAnyClass
-  - DeriveGeneric
-  - GeneralisedNewtypeDeriving
-  - StandaloneDeriving
-  # type classes
-  - FunctionalDependencies
-  - FlexibleContexts
-  - InstanceSigs
-  # types
-  - LiberalTypeSynonyms
-  - TypeOperators
 
 
 executables:
