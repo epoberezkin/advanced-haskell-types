@@ -23,11 +23,11 @@ orgName (Org info _) = name info
 
 -- or we can define a type class and interfaces - it looks better
 
-class Account a where
+class Acc a where
   accountName :: a -> Text
-instance Account User where
+instance Acc User where
   accountName (User info) = name info
-instance Account Org where
+instance Acc Org where
   accountName (Org info _) = name info
 
 -- we can have more precise type in orgMembers function and avoid runtime errors completely
@@ -38,7 +38,7 @@ orgMembers (Org _ ms) = ms
 -- but if we want to have the list with both users and orgs we will have to create a wrapper type
 
 type Accounts = [A]
-data A = forall a. Account a => A a
+data A = forall a. Acc a => A a
 
 
 main :: IO ()
